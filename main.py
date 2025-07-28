@@ -322,3 +322,4 @@ if __name__ == '__main__':
     print(f"Intentos de acceso hoy: {resumen['total_intentos']}")
     print(f"Accesos permitidos hoy: {resumen['accesos_permitidos']}")
     print(f"Accesos denegados hoy: {resumen['accesos_denegados']}")
+    app.run(debug=True)
