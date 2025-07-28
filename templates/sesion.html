@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Acceso - Iniciar Sesión</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style_sesion.css') }}">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo-section">
+            <div class="logo">🔐</div>
+            <h1 class="title">Control de Acceso</h1>
+            <p class="subtitle">Iniciar sesión en el sistema</p>
+        </div>
+
+        <div class="user-type-selector">
+            <div class="user-type-option active" data-type="usuario">
+                👤 Usuario
+            </div>
+            <div class="user-type-option" data-type="administrador">
+                👨‍💼 Administrador
+            </div>
+        </div>
+
+        <form id="loginForm">
+            <div class="error-message" id="errorMessage"></div>
+            <div class="success-message" id="successMessage"></div>
+
+            <div class="form-group">
+                <label class="form-label" for="username">Usuario</label>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    class="form-input"
+                    placeholder="Ingrese su nombre de usuario"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="password">Contraseña</label>
+                <div class="password-container">
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        class="form-input"
+                        placeholder="Ingrese su contraseña"
+                        required
+                    >
+                    <span class="toggle-password" id="togglePassword" style="cursor:pointer;">👁️</span>
+                </div>
+            </div>
+
+            <div class="remember-forgot">
+                <label class="remember-me">
+                    <input type="checkbox" id="rememberMe">
+                    Recordarme
+                </label>
+                <a href="#" class="forgot-password" onclick="showForgotPassword()">¿Olvidó su contraseña?</a>
+            </div>
+
+            <button type="submit" class="login-button" id="loginButton">
+                <span class="loading" id="loading"></span>
+                <span id="buttonText">Iniciar Sesión</span>
+            </button>
+        </form>
+
+        <div class="footer">
+            <p>&copy; 2025 Sistema de Control de Acceso. Todos los derechos reservados.</p>
+        </div>
+    </div>
+
+<script src="{{ url_for('static', filename='login.js') }}"></script>
+
+</body>
+</html>

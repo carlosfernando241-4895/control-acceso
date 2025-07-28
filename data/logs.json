@@ -1,0 +1,730 @@
+[
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "12345678",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-12T22:10:02.616395"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "87654321",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Visitante autorizado para hoy",
+        "fecha_hora": "2025-07-12T22:10:02.617393"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "12345678",
+        "vehiculo_placa": "ABC123",
+        "resultado": true,
+        "razon": "Vehículo autorizado - Propietario: empleado",
+        "fecha_hora": "2025-07-12T22:10:02.619388"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "87654321",
+        "vehiculo_placa": "XYZ789",
+        "resultado": true,
+        "razon": "Vehículo autorizado - Propietario: visitante",
+        "fecha_hora": "2025-07-12T22:10:02.621381"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "263882903",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-17T15:08:28.406733"
+    },
+    {
+        "persona_tipo": "desconocido",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Persona no registrada",
+        "fecha_hora": "2025-07-17T16:42:59.389769"
+    },
+    {
+        "persona_tipo": "desconocido",
+        "persona_rut": "",
+        "vehiculo_placa": "QWER78",
+        "resultado": false,
+        "razon": "Vehículo no registrado",
+        "fecha_hora": "2025-07-17T16:43:17.586738"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "263882903",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-20T15:41:07.985334"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-20T15:41:35.181343"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "245879632",
+        "vehiculo_placa": "QWER75",
+        "resultado": false,
+        "razon": "Propietario sin acceso válido",
+        "fecha_hora": "2025-07-20T15:41:51.044731"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "260767216",
+        "vehiculo_placa": "QWE487",
+        "resultado": true,
+        "razon": "Vehículo autorizado - Propietario: empleado",
+        "fecha_hora": "2025-07-20T15:42:20.073725"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "126881568",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T09:53:30.385777"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "126881568",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T09:53:55.545482"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T09:54:54.551643"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T09:54:55.352258"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T09:54:55.697269"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T09:55:06.177913"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T09:55:06.613363"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T09:55:06.997185"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T09:55:47.471988"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Empleado inactivo o RUT inválido",
+        "fecha_hora": "2025-07-22T09:56:10.941214"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Empleado inactivo o RUT inválido",
+        "fecha_hora": "2025-07-22T09:56:47.333239"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Empleado inactivo o RUT inválido",
+        "fecha_hora": "2025-07-22T09:56:57.526312"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Empleado inactivo o RUT inválido",
+        "fecha_hora": "2025-07-22T09:56:58.123713"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Empleado inactivo o RUT inválido",
+        "fecha_hora": "2025-07-22T09:56:58.299248"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Empleado inactivo o RUT inválido",
+        "fecha_hora": "2025-07-22T09:56:58.455825"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "126881568",
+        "vehiculo_placa": "SDFG45",
+        "resultado": true,
+        "razon": "Vehículo autorizado - Propietario: empleado",
+        "fecha_hora": "2025-07-22T10:01:01.495233"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T12:32:52.859385"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Visitante inactivo",
+        "fecha_hora": "2025-07-22T12:33:10.865479"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Visitante inactivo",
+        "fecha_hora": "2025-07-22T12:33:14.850585"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "263882903",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T12:33:31.505696"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Visitante inactivo",
+        "fecha_hora": "2025-07-22T12:36:17.653620"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "263882911",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Visitante inactivo",
+        "fecha_hora": "2025-07-22T12:45:12.750381"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Visita expirada: era para 2025-07-20, hoy es 2025-07-22",
+        "fecha_hora": "2025-07-22T12:56:31.323549"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "263882903",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T12:59:46.514086"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Visita expirada: era para 2025-07-20, hoy es 2025-07-22",
+        "fecha_hora": "2025-07-22T12:59:59.526842"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "263882911",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T14:04:10.002312"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "245879632",
+        "vehiculo_placa": "QWER75",
+        "resultado": false,
+        "razon": "Propietario sin acceso válido",
+        "fecha_hora": "2025-07-22T14:06:40.896117"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "260767216",
+        "vehiculo_placa": "QWE487",
+        "resultado": false,
+        "razon": "Propietario sin acceso válido",
+        "fecha_hora": "2025-07-22T14:07:40.696434"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "263882903",
+        "vehiculo_placa": "ABSD48",
+        "resultado": true,
+        "razon": "Vehículo autorizado - Propietario: visitante",
+        "fecha_hora": "2025-07-22T14:22:34.720417"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "263882903",
+        "vehiculo_placa": "ABSD48",
+        "resultado": false,
+        "razon": "Propietario sin acceso válido",
+        "fecha_hora": "2025-07-22T14:23:27.273264"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "263882903",
+        "vehiculo_placa": "ABSD48",
+        "resultado": false,
+        "razon": "Propietario sin acceso válido",
+        "fecha_hora": "2025-07-22T14:23:31.912987"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "263882903",
+        "vehiculo_placa": "ABSD48",
+        "resultado": false,
+        "razon": "Propietario sin acceso válido",
+        "fecha_hora": "2025-07-22T14:23:32.818384"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "263882903",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T14:36:00.682590"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "263882903",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T14:42:59.016993"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "263882911",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T14:43:04.505986"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "263882903",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T14:52:53.131224"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "263882903",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T15:11:11.014284"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "263882903",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T15:11:13.122407"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "263882903",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T15:11:37.103916"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "263882903",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T15:11:39.390992"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "263882911",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T15:12:02.158785"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "263882911",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T15:12:03.295103"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "263882911",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T15:12:14.608103"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "263882911",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Visita expirada: era para 2025-07-21, hoy es 2025-07-22",
+        "fecha_hora": "2025-07-22T15:12:34.245568"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "263882911",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Visita expirada: era para 2025-07-21, hoy es 2025-07-22",
+        "fecha_hora": "2025-07-22T15:13:50.089345"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "263882903",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-22T15:14:09.436442"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "263882903",
+        "vehiculo_placa": "ABSD48",
+        "resultado": false,
+        "razon": "Propietario sin acceso válido",
+        "fecha_hora": "2025-07-22T15:15:07.606353"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "178455613",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Visita expirada: era para 2025-07-24, hoy es 2025-07-22",
+        "fecha_hora": "2025-07-22T15:47:20.933408"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "26388292K",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Visitante autorizado para hoy",
+        "fecha_hora": "2025-07-22T15:48:03.890632"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "178455648",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Visita expirada: era para 2025-07-19, hoy es 2025-07-22",
+        "fecha_hora": "2025-07-22T15:51:10.461831"
+    },
+    {
+        "persona_tipo": "vehiculo",
+        "persona_rut": "ABC123",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Acceso permitido",
+        "fecha_hora": "2025-07-22T15:55:26.051481"
+    },
+    {
+        "persona_tipo": "vehiculo",
+        "persona_rut": "ABC456",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Acceso permitido",
+        "fecha_hora": "2025-07-22T15:55:40.684533"
+    },
+    {
+        "persona_tipo": "vehiculo",
+        "persona_rut": "ABC458",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Vehículo no registrado",
+        "fecha_hora": "2025-07-22T15:55:52.972869"
+    },
+    {
+        "persona_tipo": "vehiculo",
+        "persona_rut": "XYZ789",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Acceso denegado",
+        "fecha_hora": "2025-07-22T15:57:18.781843"
+    },
+    {
+        "persona_tipo": "vehiculo",
+        "persona_rut": "XYZ789",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Visita expirada o visitante inactivo",
+        "fecha_hora": "2025-07-22T16:05:46.799890"
+    },
+    {
+        "persona_tipo": "vehiculo",
+        "persona_rut": "ABC456",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Vehículo autorizado (empleado)",
+        "fecha_hora": "2025-07-22T16:06:14.827594"
+    },
+    {
+        "persona_tipo": "vehiculo",
+        "persona_rut": "DCHR24",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Visita expirada o visitante inactivo",
+        "fecha_hora": "2025-07-22T16:08:13.323428"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "26388292K",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Visita expirada: era para 2025-07-22, hoy es 2025-07-23",
+        "fecha_hora": "2025-07-23T14:00:31.710244"
+    },
+    {
+        "persona_tipo": "vehiculo",
+        "persona_rut": "ABC123",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Vehículo autorizado (empleado)",
+        "fecha_hora": "2025-07-23T14:01:49.084970"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "26388292K",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Visita expirada: era para 2025-07-22, hoy es 2025-07-23",
+        "fecha_hora": "2025-07-23T14:26:51.089802"
+    },
+    {
+        "persona_tipo": "vehiculo",
+        "persona_rut": "ABC123",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Vehículo autorizado (empleado)",
+        "fecha_hora": "2025-07-23T14:27:44.443612"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "26388292K",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Visita expirada: era para 2025-07-22, hoy es 2025-07-23",
+        "fecha_hora": "2025-07-23T15:11:02.668851"
+    },
+    {
+        "persona_tipo": "vehiculo",
+        "persona_rut": "ABCD12",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Vehículo autorizado (empleado)",
+        "fecha_hora": "2025-07-23T15:12:30.055423"
+    },
+    {
+        "persona_tipo": "vehiculo",
+        "persona_rut": "AB1234",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Visita expirada o visitante inactivo",
+        "fecha_hora": "2025-07-23T15:12:48.286758"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Empleado inactivo o RUT inválido",
+        "fecha_hora": "2025-07-25T11:36:35.067601"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-25T11:36:54.364283"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "26388292K",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Visita expirada: era para 2025-07-22, hoy es 2025-07-25",
+        "fecha_hora": "2025-07-25T11:37:16.984443"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "26388292K",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Visita expirada: era para 2025-07-22, hoy es 2025-07-25",
+        "fecha_hora": "2025-07-25T11:37:53.779890"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "26388292K",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Visitante autorizado para hoy",
+        "fecha_hora": "2025-07-25T11:39:13.639223"
+    },
+    {
+        "persona_tipo": "vehiculo",
+        "persona_rut": "AB123",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Vehículo autorizado (empleado)",
+        "fecha_hora": "2025-07-25T11:40:05.285217"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "178455613",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Visita expirada: era para 2025-07-24, hoy es 2025-07-25",
+        "fecha_hora": "2025-07-25T12:39:58.221562"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-25T19:29:33.907879"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Empleado inactivo o RUT inválido",
+        "fecha_hora": "2025-07-25T19:30:35.000173"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "260767216",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-25T19:31:01.892490"
+    },
+    {
+        "persona_tipo": "empleado",
+        "persona_rut": "256385295",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Empleado activo",
+        "fecha_hora": "2025-07-25T19:33:03.800920"
+    },
+    {
+        "persona_tipo": "vehiculo",
+        "persona_rut": "SDFG36",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Vehículo autorizado (empleado)",
+        "fecha_hora": "2025-07-25T19:37:55.431628"
+    },
+    {
+        "persona_tipo": "vehiculo",
+        "persona_rut": "SDFG36",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Empleado inactivo o RUT inválido",
+        "fecha_hora": "2025-07-25T19:38:11.947669"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "178455613",
+        "vehiculo_placa": null,
+        "resultado": true,
+        "razon": "Visitante autorizado para hoy",
+        "fecha_hora": "2025-07-25T19:42:33.545395"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "178455648",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Visita expirada: era para 2025-07-19, hoy es 2025-07-25",
+        "fecha_hora": "2025-07-25T19:43:41.479511"
+    },
+    {
+        "persona_tipo": "visitante",
+        "persona_rut": "178455613",
+        "vehiculo_placa": null,
+        "resultado": false,
+        "razon": "Visita expirada: era para 2025-07-25, hoy es 2025-07-28",
+        "fecha_hora": "2025-07-28T09:51:04.384338"
+    }
+]

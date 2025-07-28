@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sistema de Control de Acceso</title>
+
+    <!-- Script para validar usuario y permisos -->
+    <script>
+      window.onload = () => {
+        const usuario = JSON.parse(localStorage.getItem("usuario"));
+        if (!usuario) {
+          window.location.href = "/sesion";
+          return;
+        }
+
+        // Ocultar sección usuarios si no tiene permiso
+        if (!usuario.permisos.includes("usuarios")) {
+          const seccionUsuarios = document.getElementById("seccion-usuarios");
+          if (seccionUsuarios) {
+            seccionUsuarios.style.display = "none";
+          }
+        }
+
+        // Mostrar nombre usuario en el header si existe el elemento
+        const usuarioNombreElem = document.getElementById("usuario-nombre");
+        if (usuarioNombreElem) {
+          usuarioNombreElem.innerText = usuario.usuario || usuario.nombre || "Usuario";
+        }
+      };
+    </script>
+  <div class="user-header">
+      <div class="welcome-message">
+        <div class="user-icon">👤</div>
+        <span>Bienvenido, <span class="user-name" id="usuario-nombre">Usuario</span>!</span>
+      </div>
+      <button class="logout-btn" onclick="cerrarSesion()">
+        <span>🔓</span>
+        <span>Cerrar Sesión</span>
+      </button>
+    </div>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_index.css') }}" />
+</head>
+<body onload="loadEmployees(); loadVisitors(); loadVehicles(); loadLogs(); updateStats();">
+
+  <!-- Verificar sesión - si no está, redirige -->
+  <script>
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+    if (!isLoggedIn || isLoggedIn !== 'true') {
+        window.location.href = '/'; // redirige al login
+    }
+  </script>
+
+  <div id="main-interface" style="display: none;"></div>
+
+  <div class="container">
+    <header>
+      Bienvenido, <span id="usuario-nombre"></span>!
+    </header>
+
+    <div class="header">
+        <h1>🔐 Sistema de Control de Acceso</h1>
+        <p>Gestión integral de empleados, visitantes y vehículos</p>
+    </div>
+
+    <div class="nav-buttons">
+        <button class="nav-btn active" onclick="showSection('employees')">
+            👥 Empleados
+        </button>
+        <button class="nav-btn" onclick="showSection('visitors')">
+            👤 Visitantes
+        </button>
+        <button class="nav-btn" onclick="showSection('vehicles')">
+            🚗 Vehículos
+        </button>
+        <button class="nav-btn" onclick="showSection('access')">
+            🔐 Control de Acceso
+        </button>
+        <button class="nav-btn" onclick="showSection('reports')">
+            📊 Reportes
+        </button>
+    </div>
+
+    <!-- ENVOLVEMOS GESTIÓN DE EMPLEADOS EN SECCIÓN CON ID PARA CONTROL DE PERMISOS -->
+
+      <!-- Sección Empleados -->
+     <div id="employees" class="section active">
+    <h2>👥 Gestión de Empleados</h2>
+
+    <div class="form-grid">
+        <div class="form-group">
+            <label for="emp-name">Nombre Completo</label>
+            <input type="text" id="emp-name" placeholder="Ej: Juan Pérez González" />
+        </div>
+        <div class="form-group">
+            <label for="emp-rut">RUT</label>
+            <input type="text" id="emp-rut" placeholder="Ej: 12345678-9" />
+        </div>
+        <div class="form-group">
+            <label for="emp-area">Área</label>
+            <input type="text" id="emp-area" placeholder="Ej: Sistemas" />
+        </div>
+        <div class="form-group">
+            <label for="emp-company">Empresa</label>
+            <input type="text" id="emp-company" placeholder="Ej: TechCorp" />
+        </div>
+        <div class="form-group">
+            <label for="emp-authorized">Autorizado por</label>
+            <input type="text" id="emp-authorized" placeholder="Ej: María García" />
+        </div>
+    </div>
+
+    <button class="btn btn-success" onclick="addEmployee()">➕ Agregar Empleado</button>
+    <button class="btn" onclick="loadEmployees()">🔄 Actualizar Lista</button>
+
+    <input
+        type="text"
+        class="search-box"
+        id="employee-search"
+        placeholder="🔍 Buscar empleado por nombre o RUT..."
+        oninput="searchEmployees()"
+    />
+
+    <div id="employee-alerts"></div>
+
+    <table class="data-table" id="employees-table">
+        <thead>
+            <tr>
+                <th>Estado</th>
+                <th>RUT</th>
+                <th>Nombre</th>
+                <th>Área</th>
+                <th>Empresa</th>
+                <th>Fecha Ingreso</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="employees-tbody">
+            <!-- Empleados se cargarán aquí -->
+        </tbody>
+    </table>
+</div>
+
+    <!-- Sección Visitantes -->
+    <div id="visitors" class="section">
+        <h2>👤 Gestión de Visitantes</h2>
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="vis-name">Nombre Completo</label>
+                <input type="text" id="vis-name" placeholder="Ej: Ana Torres" />
+            </div>
+            <div class="form-group">
+                <label for="vis-rut">RUT</label>
+                <input type="text" id="vis-rut" placeholder="Ej: 98765432-1" />
+            </div>
+            <div class="form-group">
+                <label for="vis-company">Empresa/Organización</label>
+                <input type="text" id="vis-company" placeholder="Ej: Cliente ABC" />
+            </div>
+            <div class="form-group">
+                <label for="vis-authorized">Autorizado por</label>
+                <input type="text" id="vis-authorized" placeholder="Ej: Carlos Mendoza" />
+            </div>
+            <div class="form-group">
+                <label for="vis-date">Fecha de Visita</label>
+                <input type="date" id="vis-date" />
+            </div>
+        </div>
+
+        <button class="btn btn-success" onclick="addVisitor()">➕ Agregar Visitante</button>
+        <button class="btn" onclick="loadVisitors()">🔄 Actualizar Lista</button>
+
+        <input
+            type="text"
+            class="search-box"
+            id="visitor-search"
+            placeholder="🔍 Buscar visitante por nombre o RUT..."
+            oninput="searchVisitors()"
+        />
+
+        <div id="visitor-alerts"></div>
+
+        <table class="data-table" id="visitors-table">
+            <thead>
+                <tr>
+                    <th>Estado</th>
+                    <th>RUT</th>
+                    <th>Nombre</th>
+                    <th>Empresa</th>
+                    <th>Fecha Visita</th>
+                    <th>Autorizado por</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="visitors-tbody">
+                <!-- Visitantes se cargarán aquí -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Sección Vehículos -->
+    <div id="vehicles" class="section">
+        <h2>🚗 Gestión de Vehículos</h2>
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="veh-plate">Placa/Patente</label>
+                <input type="text" id="veh-plate" placeholder="Ej: ABC12 o ABCD12" />
+            </div>
+            <div class="form-group">
+                <label for="veh-model">Modelo</label>
+                <input type="text" id="veh-model" placeholder="Ej: Toyota Corolla 2020" />
+            </div>
+            <div class="form-group">
+                <label for="veh-owner-type">Tipo de Propietario</label>
+                <select id="veh-owner-type">
+                    <option value="">Seleccionar...</option>
+                    <option value="empleado">Empleado</option>
+                    <option value="visitante">Visitante</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="veh-owner-rut">RUT del Propietario</label>
+                <input type="text" id="veh-owner-rut" placeholder="Ej: 12345678-9" />
+            </div>
+        </div>
+
+        <button class="btn btn-success" onclick="addVehicle()">➕ Agregar Vehículo</button>
+        <button class="btn" onclick="loadVehicles()">🔄 Actualizar Lista</button>
+
+        <input
+            type="text"
+            class="search-box"
+            id="vehicle-search"
+            placeholder="🔍 Buscar vehículo por placa..."
+            oninput="searchVehicles()"
+        />
+
+        <div id="vehicle-alerts"></div>
+
+        <table class="data-table" id="vehicles-table">
+            <thead>
+                <tr>
+                    <th>Placa</th>
+                    <th>Modelo</th>
+                    <th>Tipo Propietario</th>
+                    <th>RUT Propietario</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="vehicles-tbody">
+                <!-- Vehículos se cargarán aquí -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Sección Control de Acceso -->
+    <div id="access" class="section">
+        <h2>🔐 Control de Acceso</h2>
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="access-type">Tipo de Verificación</label>
+                <select id="access-type" onchange="toggleAccessInput()">
+                    <option value="persona">Persona (RUT)</option>
+                    <option value="vehiculo">Vehículo (Placa/Patente)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="access-input" id="access-input-label">RUT de la Persona</label>
+                <input type="text" id="access-input" placeholder="Ej: 12345678-9" />
+            </div>
+        </div>
+
+        <button class="btn btn-success" onclick="verifyAccess()">🔍 Verificar Acceso</button>
+
+        <div id="access-result"></div>
+
+        <h3>📋 Últimos Registros de Acceso</h3>
+        <div class="logs-container" id="access-logs">
+            <!-- Logs se cargarán aquí -->
+        </div>
+    </div>
+
+    <!-- Sección Reportes -->
+    <div id="reports" class="section">
+        <h2>📊 Reportes y Estadísticas</h2>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3 id="total-employees">0</h3>
+                <p>Empleados Registrados</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="total-visitors">0</h3>
+                <p>Visitantes Registrados</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="total-vehicles">0</h3>
+                <p>Vehículos Registrados</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="total-logs">0</h3>
+                <p>Registros de Acceso</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="today-access">0</h3>
+                <p>Accesos Hoy</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="today-denegados">0</h3>
+                <p>Accesos Denegados Hoy</p>
+            </div>
+        </div>
+
+        <button class="btn" onclick="updateStats()">🔄 Actualizar Estadísticas</button>
+        <button class="btn btn-warning" onclick="exportarDatos()">📥 Exportar Datos</button>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

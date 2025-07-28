@@ -1,0 +1,29 @@
+[
+    {
+        "nombre": "Carlos Molina",
+        "rut": "263882903",
+        "area": "Tecnologia",
+        "empresa": "TecnoCop",
+        "autorizado_por": "Javier Contreras",
+        "fecha_ingreso": "2025-07-22",
+        "activo": true
+    },
+    {
+        "nombre": "Jose Maria",
+        "rut": "263882911",
+        "area": "mantenimiento",
+        "empresa": "entel",
+        "autorizado_por": "Mauricio Barriga",
+        "fecha_ingreso": "2025-07-22",
+        "activo": true
+    },
+    {
+        "nombre": "Javier Contreras",
+        "rut": "17845563K",
+        "area": "Incendio",
+        "empresa": "JC Ingenieria",
+        "autorizado_por": "Rodrigo Navia",
+        "fecha_ingreso": "2025-07-24",
+        "activo": true
+    }
+]

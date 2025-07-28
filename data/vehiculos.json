@@ -1,0 +1,32 @@
+[
+    {
+        "placa": "AB123",
+        "modelo": "Moto Honda",
+        "propietario_tipo": "empleado",
+        "propietario_id": "263882903"
+    },
+    {
+        "placa": "ABC12",
+        "modelo": "Moto Yamaha",
+        "propietario_tipo": "empleado",
+        "propietario_id": "263882903"
+    },
+    {
+        "placa": "AB1234",
+        "modelo": "Toyota runner",
+        "propietario_tipo": "visitante",
+        "propietario_id": "26388292K"
+    },
+    {
+        "placa": "ABCD12",
+        "modelo": "chevrolet captiva",
+        "propietario_tipo": "empleado",
+        "propietario_id": "260767216"
+    },
+    {
+        "placa": "SDFG36",
+        "modelo": "chery",
+        "propietario_tipo": "empleado",
+        "propietario_id": "260767216"
+    }
+]

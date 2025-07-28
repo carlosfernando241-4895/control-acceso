@@ -1,0 +1,18 @@
+[
+    {
+        "nombre": "Heriberto Silva",
+        "rut": "178455648",
+        "empresa": "electricidad",
+        "fecha_entrada": "2025-07-19",
+        "autorizado_por": "manuel",
+        "activo": false
+    },
+    {
+        "nombre": "samuel figueroa",
+        "rut": "178455613",
+        "empresa": "genearl electric",
+        "fecha_entrada": "2025-07-25",
+        "autorizado_por": "francisco",
+        "activo": false
+    }
+]

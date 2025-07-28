@@ -1,0 +1,14 @@
+[
+  {
+    "usuario": "admin",
+    "password": "scrypt:32768:8:1$tnKeraO2SS4dYrkM$265e5dfb7a9121a8fe31db1b91765b20357e933591df2cf3a05e3f91cbea2c956fb101c21a03f6ce2951fa5b8d5f075d1f75419be76bff507b63a6160216d55b",
+    "rol": "admin",
+    "permisos": ["empleados", "vehiculos", "accesos", "usuarios"]
+  },
+  {
+  "usuario": "juan",
+  "password": "scrypt:32768:8:1$MG8hYXlzj0jg0c00$8fc23f1eb7922ec0254f67f07525db90f6e40a9f579b6a051184fcd898aa27d2ffba66a02a0955711e2178d1af23f8a54a618b8f7e20011427e860686430de72",
+  "rol": "usuario",
+  "permisos": ["empleados", "accesos"]
+}
+]
