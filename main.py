@@ -315,6 +315,8 @@ def exportar_datos():
 
 # --- INICIO DE LA APLICACIÓN ---
 if __name__ == '__main__':
+    from os import environ  # nuevo
+    port = int(environ.get("PORT", 5000)) #nuevo render no usa main.py, sino gunicorn y ademas el puerto es dinamico
     resumen = sistema.obtener_resumen()
     print(f"Empleados registrados: {resumen['empleados_registrados']}")
     print(f"Visitantes registrados: {resumen['visitantes_registrados']}")
@@ -322,4 +324,5 @@ if __name__ == '__main__':
     print(f"Intentos de acceso hoy: {resumen['total_intentos']}")
     print(f"Accesos permitidos hoy: {resumen['accesos_permitidos']}")
     print(f"Accesos denegados hoy: {resumen['accesos_denegados']}")
-    # app.run(debug=True)
+    #app.run(debug=True)
+    app.run(host='0.0.0.0', port=port)
